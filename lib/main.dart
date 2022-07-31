@@ -1,5 +1,8 @@
+import 'package:clock_app_sqflite/enum/enums.dart';
+import 'package:clock_app_sqflite/model/menu_info.dart';
 import 'package:clock_app_sqflite/screens/homePage.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,9 @@ class MyApp extends StatelessWidget {
           fontFamily: "AvenirRoman"
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: ChangeNotifierProvider <MenuInfo>(
+          create: (context) => MenuInfo("Clock", "", menuType: MenuType.clock),
+          child: const HomePage()),
     );
   }
 }
