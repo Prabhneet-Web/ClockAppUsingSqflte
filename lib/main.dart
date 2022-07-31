@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: ChangeNotifierProvider <MenuInfo>(
-          create: (context) => MenuInfo("Clock", "", menuType: MenuType.clock),
+          create: (context) => MenuInfo(title: "Clock", imageSource:  "", menuType: MenuType.clock),
           child: const HomePage()),
     );
   }
