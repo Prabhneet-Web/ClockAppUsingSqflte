@@ -51,7 +51,10 @@ class _HomePageState extends State<HomePage> {
                       fit: FlexFit.tight,
                       child: Text(
                         "Clock",
-                        style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                     Flexible(
@@ -75,11 +78,14 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                     Flexible(
+                    Flexible(
                         flex: 6,
                         fit: FlexFit.tight,
                         child: Align(
-                            alignment: Alignment.center, child: ClockView(size: mediaQuery.size.height / 2.8,))),
+                            alignment: Alignment.center,
+                            child: ClockView(
+                              size: mediaQuery.size.height / 2.8,
+                            ))),
                     Flexible(
                       flex: 2,
                       fit: FlexFit.tight,
